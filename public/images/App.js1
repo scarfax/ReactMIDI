@@ -1,0 +1,24 @@
+import React from 'react';
+import './css/index.css';
+import Keyboard from './Keyboard';
+
+const App = () => {
+  const [dados, setdados] = React.useState(null);
+
+  function handleClick(sound) {
+    console.log(sound.target.innerText);
+    audio = new Audio('../../sounds/pom.wav');
+    <audio src={`../../sounds/${sound.target.innerText}.wav`} />;
+  }
+
+  return (
+    <div>
+      <button onClick={handleClick}>pom</button>
+      <button onClick={handleClick}>clap</button>
+      <button onClick={handleClick}>tim</button>
+      <Keyboard />
+    </div>
+  );
+};
+
+export default App;

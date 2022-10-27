@@ -1,0 +1,20 @@
+import React from 'react';
+import './css/index.css';
+import Key from './Key';
+
+function App() {
+  const start = (sound) => {
+    console.log(sound.target.innerText);
+    const audio = new Audio(`../../sounds/${sound.target.innerText}.wav`);
+    audio.play();
+  };
+
+  return (
+    <section>
+      <h1>React MIDI</h1>
+      <Key />
+    </section>
+  );
+}
+
+export default App;
