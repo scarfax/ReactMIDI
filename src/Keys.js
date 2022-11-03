@@ -1,8 +1,6 @@
 import React from 'react';
-import './css/index.css';
-import Key from './Key';
 
-function App() {
+function Keys(props) {
   const start = (sound) => {
     console.log(sound.target.innerText);
     const audio = new Audio(`../../sounds/${sound.target.innerText}.wav`);
@@ -10,11 +8,14 @@ function App() {
   };
 
   return (
-    <section>
-      <h1>React MIDI</h1>
-      <Key />
-    </section>
+    <div className="keyboard">
+      {props.keys.map((keys) => (
+        <button className="key" onClick={start}>
+          {keys}
+        </button>
+      ))}
+    </div>
   );
 }
 
-export default App;
+export default Keys;
