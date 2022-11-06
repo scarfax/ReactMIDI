@@ -14,7 +14,7 @@ function App() {
         'Toim',
         'Psh',
         'Tic',
-        'Toam',
+        'Toim',
       ]}
     />
   );

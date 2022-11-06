@@ -7,15 +7,13 @@ function Keys(props) {
     audio.play();
   };
 
-  return (
-    <div className="keyboard">
-      {props.keys.map((keys) => (
-        <button className="key" onClick={start}>
-          {keys}
-        </button>
-      ))}
-    </div>
-  );
+  const keyList = props.keys.map((keys, index) => (
+    <button key={index} className="key" onClick={start}>
+      {keys}
+    </button>
+  ));
+
+  return <div className="keyboard">{keyList}</div>;
 }
 
 export default Keys;
